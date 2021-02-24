@@ -48,7 +48,7 @@ def file_path(string):
 
 def load_yaml(path):
   with open(path) as file:  
-    res = yaml.load(file, Loader=yaml.FullLoader) 
+    res = yaml.load(file, Loader=yaml.SafeLoader)
   return res
 
 def eval_lists_into_dataloaders( eval_lists, env):
